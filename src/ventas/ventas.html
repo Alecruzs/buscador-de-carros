@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas | Concesionario WorldCar</title>
+    <link rel="icon" type="image/png" href="../assets/images/carro-deportivo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/styles/styles.css" rel="stylesheet">
+    <link href="../assets/styles/ventas.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../home.html">
+                <img src="../assets/images/carro-deportivo-rojo.png" alt="WorldCar Logo"> WorldCar
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../home.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Ventas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contáctanos</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="btn btn-outline-light btn-sm" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero sales-hero">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="text-center text-white py-5">
+                <h1 class="display-5 fw-bold">Sección de Ventas WorldCar</h1>
+                <p class="lead mt-3">Encuentra las mejores ofertas de vehículos de lujo, deportivos y familiares con financiamiento personalizado.</p>
+                <a href="#salesSection" class="btn btn-primary btn-lg mt-4">Ver ofertas</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="salesSection" class="sales-section py-5">
+        <div class="container">
+            <div class="sales-card p-4 p-md-5 shadow-sm">
+                <div class="row align-items-center mb-4">
+                    <div class="col-lg-8">
+                        <h2>Ofertas de ventas</h2>
+                        <p>Selecciona el vehículo que mejor se adapte a tu estilo y accede a planes de pago exclusivos.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="#inventory" class="btn btn-outline-light btn-lg">Ver inventario completo</a>
+                    </div>
+                </div>
+
+                <form class="row g-3 mb-5 justify-content-center align-items-end">
+                    <div class="col-md-3">
+                        <label for="salesBrand" class="form-label fw-bold">Marca</label>
+                        <input type="text" list="salesBrandList" class="form-control form-control-lg" id="salesBrand" placeholder="Buscar marca">
+                        <datalist id="salesBrandList">
+                            <option value="Audi">
+                            <option value="BMW">
+                            <option value="Mercedes-Benz">
+                            <option value="Lamborghini">
+                            <option value="Porsche">
+                        </datalist>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="salesModel" class="form-label fw-bold">Modelo</label>
+                        <input type="text" list="salesModelList" class="form-control form-control-lg" id="salesModel" placeholder="Buscar modelo">
+                        <datalist id="salesModelList">
+                            <option value="A3">
+                            <option value="Clase C">
+                            <option value="Huracán">
+                            <option value="Cayenne">
+                        </datalist>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="salesYear" class="form-label fw-bold">Año</label>
+                        <input type="text" list="salesYearList" class="form-control form-control-lg" id="salesYear" placeholder="Año">
+                        <datalist id="salesYearList">
+                            <option value="2024">
+                            <option value="2023">
+                            <option value="2022">
+                        </datalist>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="salesCondition" class="form-label fw-bold">Condición</label>
+                        <input type="text" list="salesConditionList" class="form-control form-control-lg" id="salesCondition" placeholder="Condición">
+                        <datalist id="salesConditionList">
+                            <option value="Nuevo">
+                            <option value="Usado">
+                        </datalist>
+                    </div>
+                    <div class="col-md-2 d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">Filtrar</button>
+                    </div>
+                </form>
+
+                <div class="row g-4" id="inventory">
+                    <div class="col-md-6 col-lg-4">
+                        <article class="sale-item p-4 rounded-4 h-100 bg-dark text-white shadow-sm">
+                            <img src="../assets/images/mercedes_benz.jpg" class="img-fluid rounded-4 mb-3" alt="Mercedes-Benz Clase C">
+                            <span class="sale-badge">Oferta</span>
+                            <h3>Mercedes-Benz Clase C</h3>
+                            <p>Elegancia, tecnología y potencia en un paquete premium con entrega inmediata.</p>
+                            <ul class="list-unstyled small text-muted mb-3">
+                                <li>Año 2024</li>
+                                <li>Turbo 4 cilindros</li>
+                                <li>Precio desde $58,900</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-sm">Solicitar cotización</a>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="sale-item p-4 rounded-4 h-100 bg-dark text-white shadow-sm">
+                            <img src="../assets/images/1-Lamborghini-Urus-SE-review-2024.jpg" class="img-fluid rounded-4 mb-3" alt="Lamborghini Urus SE">
+                            <span class="sale-badge">Premium</span>
+                            <h3>Lamborghini Urus SE</h3>
+                            <p>Performance extremo combinado con lujo y tecnología de última generación.</p>
+                            <ul class="list-unstyled small text-muted mb-3">
+                                <li>Año 2024</li>
+                                <li>V8 biturbo</li>
+                                <li>Precio desde $259,000</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-sm">Ver detalles</a>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="sale-item p-4 rounded-4 h-100 bg-dark text-white shadow-sm">
+                            <img src="../assets/images/2023-mazda-cx-5-gallery-image07.avif" class="img-fluid rounded-4 mb-3" alt="Mazda CX-5">
+                            <span class="sale-badge">Nuevo ingreso</span>
+                            <h3>Mazda CX-5</h3>
+                            <p>Confort y seguridad para la familia con espacio amplio y equipamiento moderno.</p>
+                            <ul class="list-unstyled small text-muted mb-3">
+                                <li>Año 2023</li>
+                                <li>Motor 2.5L</li>
+                                <li>Precio desde $42,800</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-sm">Agendar prueba</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -7,33 +7,37 @@
     <link rel="icon" type="image/png" href="./assets/images/carro-deportivo.png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Archivo de estilos -->
     <link href="./assets/styles/styles.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Navbar/ barra de navegacion con sus elementos-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#"> <!-- LOGO -->
                 <img src="./assets/images/carro-deportivo-rojo.png" alt="WorldCar Logo"> WorldCar
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item">
+            <div class="collapse navbar-collapse" id="navbarNav"><!-- Se crea un div con una ul para los elementos que van en la barra de navegacion   -->
+                <ul class="navbar-nav ms-auto align-items-lg-center"> 
+                    <li class="nav-item"> <!-- ITEM SEDES -->
                         <a class="nav-link active" href="#">Sedes</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item"> <!-- ITEM CATALOGO -->
                         <a class="nav-link" href="#">Catalogo</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item"> <!-- ITEM VENTAS -->
+                        <a class="nav-link" href="./ventas/ventas.html">Ventas</a>
+                    </li>
+                    <li class="nav-item"> <!-- ITEM REPUESTOS -->
                         <a class="nav-link" href="#">Repuestos</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item"> <!-- ITEM CONTÁCTANOS -->
                         <a class="nav-link" href="#">Contáctanos</a>
                     </li>
-                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0"> <!-- BOTON DEL LOGIN -->
                         <a class="btn btn-outline-light btn-sm" href="#">Login</a>
                     </li>
                 </ul>
@@ -45,33 +49,52 @@
     <section class="hero">
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button> <!-- se crea un boton con una funcion de deslizamiento para el primer item -->
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button><!-- se crea un boton con una funcion de deslizamiento pera el segundo item  --> 
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button> <!-- se crea un boton con una funcion de deslizamiento para el tercer item -->
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button> <!-- se crea un boton con una funcion de deslizamiento para el cuarto item -->
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button> <!-- se crea un boton con una funcion de deslizamiento para el quinto item -->
+            </div> 
+
+            <!-- Imagenes del carrusel -->
+            <div class="carousel-inner"> <!-- imagen 1 -->
                 <div class="carousel-item active">
-                    <img src="./assets/images/Bugatti-Tourbillon-V16.jpg" class="d-block w-100" alt="Luxury Car 1">
+                    <img src="./assets/images/bugatti-tourbillon-12.webp" class="d-block w-100" alt="Luxury Car 1">
                     <div class="carousel-caption d-none d-md-block">
-                        <h1>Bienvenido a WorldCar</h1>
-                        <p>Descubre la excelencia en vehículos de alta gama</p>
+                        <h1>Bugatti Tourbillon V16</h1>
+                        <p>Motor V16 Híbrido con na botencial de 1.800 CV, llegando asi a una velocidad de 445 km/h y su diseño interior proviene de la alta relojeria suiza, por eso su nombre "Tourbillon".</p>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item"> <!-- imagen 2 -->
                     <img src="./assets/images/mercedes_benz.jpg" class="d-block w-100" alt="Luxury Car 2">
                     <div class="carousel-caption d-none d-md-block">
-                        <h1>Numeros de telefonos</h1>
-                        <p>+1 (555) 123-4567</p>
+                        <h1>Mercedez-Benz Clase C</h1>
+                        <p>Un vehículo de lujo que combina elegancia y rendimiento en cada kilometro. Motor 4 cilindros, con una velocidad máxima de 250 km/h con un acabado estetico estilo AMG.</p>
+                    </div>
+                </div>
+                <div class="carousel-item"> <!-- imagen 3 -->
+                    <img src="./assets/images/cupra-leon-hibrido-vista-delantera-lateral.jpeg" class="d-block w-100" alt="Luxury Car 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Cupra Leon Híbrido</h1>
+                        <p>Destaca por su diseño agresivo deportivo con exclusivos detalles y lineas aerodinámicas. Motor híbrido enchufable de 245 CV, permitiendo alcanzar una velocidad maxima de 225 km/h.</p>
+                    </div>
+                </div>
+                <div class="carousel-item"> <!-- imagen 4 -->
+                    <img src="./assets/images/1-Lamborghini-Urus-SE-review-2024.jpg" class="d-block w-100" alt="Luxury Car 4">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Lamborghini Urus SE</h1>
+                        <p>Explora los últimos lanzamientos y encuentra el auto de tus sueños con estilo y tecnología de punta.</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./assets/images/cupra-leon-hibrido-vista-delantera-lateral.jpeg" class="d-block w-100" alt="Luxury Car 3">
+                    <img src="./assets/images/2023-mazda-cx-5-gallery-image07.avif" class="d-block w-100" alt="Luxury Car 5">
                     <div class="carousel-caption d-none d-md-block">
-                        <h1>Sedes</h1>
-                        <p>Visitanos en nuestras sucursales</p>
+                        <h1>Mazda CX 5 </h1>
+                        <p>Conduce con elegancia y potencia gracias a una experiencia pensada para la carretera y el confort.</p>
                     </div>
-                </div>
-            </div>
+                </div><!-- Aqui termina el carrusel de fotos -->
+
+            </div> <!-- Controles del carrusel  -->
             <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -80,10 +103,373 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
+                </div><!-- Aqui terminan los controles del carrusel -->
+    </section>
+
+    <!-- Subscription Section -->
+    <section class="subscribe-section py-3">
+        <div class="container">
+            <div class="subscribe-card p-3 shadow-sm text-center">
+                <div class="row align-items-center justify-content-center gx-3 gy-2">
+                    <div class="col-lg-6">
+                        <h2>Suscríbete</h2>
+                        <p>Promociones y lanzamientos del mundo automotriz directamente en tu correo.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <form class="row g-2 align-items-center justify-content-end">
+                            <div class="col-sm-8">
+                                <label class="visually-hidden" for="subscribeEmail">Correo electrónico</label>
+                                <input type="email" class="form-control form-control-sm" id="subscribeEmail" placeholder="Tu correo electrónico">
+                            </div>
+                            <div class="col-sm-4 d-grid">
+                                <button type="submit" class="btn btn-primary btn-sm">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Aqui termina la sección de suscripción -->
+
+    <!-- Catalog Section -->
+    <section class="catalog-section py-3">
+        <div class="container">
+            <div class="catalog-card p-3 p-md-4 shadow-sm text-center">
+                <h2>Explora Nuestro Catálogo</h2>
+                <p>Encuentra el vehículo perfecto con nuestros filtros avanzados</p>
+                <form class="row g-3 justify-content-center align-items-end mt-4">
+                    
+                    <div class="col-md-3"> <!-- Marca -->
+                        <label for="brandInput" class="form-label fw-bold">Marca</label>
+                        <input type="text" class="form-control form-control-lg" id="brandInput" list="brandList" placeholder="Seleccionar marca">
+                        <datalist id="brandList">
+                            <option value="Audi">
+                            <option value="BMW">
+                            <option value="Mercedes-Benz">
+                            <option value="Porsche">
+                            <option value="Ferrari">
+                            <option value="Lamborghini">
+                        </datalist>
+                    </div>
+                    <div class="col-md-3"> <!-- Modelo -->
+                        <label for="modelInput" class="form-label fw-bold">Modelo</label>
+                        <input type="text" class="form-control form-control-lg" id="modelInput" list="modelList" placeholder="Seleccionar modelo">
+                        <datalist id="modelList">
+                            <option value="A3">
+                            <option value="X3">
+                            <option value="Clase C">
+                            <option value="911">
+                            <option value="488 Spider">
+                            <option value="Huracán">
+                        </datalist>
+                    </div>
+                    <div class="col-md-2"> <!-- Año -->
+                        <label for="yearInput" class="form-label fw-bold">Año</label>
+                        <input type="text" class="form-control form-control-lg" id="yearInput" list="yearList" placeholder="Año">
+                        <datalist id="yearList">
+                            <option value="2024">
+                            <option value="2023">
+                            <option value="2022">
+                            <option value="2021">
+                            <option value="2020">
+                        </datalist>
+                    </div>
+                    <div class="col-md-2"> <!-- Condición -->
+                        <label for="conditionInput" class="form-label fw-bold">Condición</label>
+                        <input type="text" class="form-control form-control-lg" id="conditionInput" list="conditionList" placeholder="Condición">
+                        <datalist id="conditionList">
+                            <option value="Nuevo">
+                            <option value="Usado">
+                        </datalist>
+                    </div>
+                    <div class="col-md-2 d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">Buscar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section><!-- Aqui termina la sección de búsqueda -->
+
+    <!-- Branches Section -->
+    <section class="branches-section py-5">
+        <div class="container">
+            <div class="branches-card p-4 p-md-5 rounded-0 shadow-sm">
+                <div class="text-center mb-4">
+                    <h2>Nuestras sedes en Venezuela</h2>
+                    <p>Seis ciudades estratégicas con Caracas como nuestra sede principal.</p>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <button type="button" class="branch-item p-3 h-100 w-100 btn btn-outline-light text-start" data-bs-toggle="modal" data-bs-target="#modalCaracas">
+                            <span class="branch-badge badge-primary">Principal</span>
+                            <h3>Caracas</h3>
+                            <p>Centro empresarial El Rosal, Torre WorldCar, Piso 12.</p>
+                            <p class="branch-city">Tel: +58 212 555 0101</p>
+                        </button>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="branch-item p-3 h-100 w-100 btn btn-outline-light text-start" data-bs-toggle="modal" data-bs-target="#modalValencia">
+                            <h3>Valencia</h3>
+                            <p>Avenida Bolivar Norte, Centro Automotriz Valencia.</p>
+                            <p class="branch-city">Tel: +58 241 555 0202</p>
+                        </button>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="branch-item p-3 h-100 w-100 btn btn-outline-light text-start" data-bs-toggle="modal" data-bs-target="#modalMaracaibo">
+                            <h3>Maracaibo</h3>
+                            <p>Av. Delicias Norte, Centro Comercial Lago Plaza.</p>
+                            <p class="branch-city">Tel: +58 261 555 0303</p>
+                        </button>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="branch-item p-3 h-100 w-100 btn btn-outline-light text-start" data-bs-toggle="modal" data-bs-target="#modalBarquisimeto">
+                            <h3>Barquisimeto</h3>
+                            <p>C.C. Las Trinitarias, Piso 2, Local 14.</p>
+                            <p class="branch-city">Tel: +58 251 555 0404</p>
+                        </button>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="branch-item p-3 h-100 w-100 btn btn-outline-light text-start" data-bs-toggle="modal" data-bs-target="#modalMaracay">
+                            <h3>Maracay</h3>
+                            <p>Avenida Constitución, Villa Bolivariana.</p>
+                            <p class="branch-city">Tel: +58 243 555 0505</p>
+                        </button>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="branch-item p-3 h-100 w-100 btn btn-outline-light text-start" data-bs-toggle="modal" data-bs-target="#modalPLC">
+                            <h3>Puerto La Cruz</h3>
+                            <p>Av. Municipal, Edificio WorldCar, Local 6.</p>
+                            <p class="branch-city">Tel: +58 286 555 0606</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Modales de mapas para cada sede -->
+    <!-- Caracas -->
+    <div class="modal fade" id="modalCaracas" tabindex="-1" aria-labelledby="modalCaracasLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="modalCaracasLabel">Ubicación: Caracas</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body p-0">
+            <iframe src="https://maps.google.com/maps?q=10.491016,-66.860077&z=16&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Valencia -->
+    <div class="modal fade" id="modalValencia" tabindex="-1" aria-labelledby="modalValenciaLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="modalValenciaLabel">Ubicación: Valencia</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body p-0">
+            <iframe src="https://maps.google.com/maps?q=10.188524,-68.000893&z=16&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Maracaibo -->
+    <div class="modal fade" id="modalMaracaibo" tabindex="-1" aria-labelledby="modalMaracaiboLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="modalMaracaiboLabel">Ubicación: Maracaibo</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body p-0">
+            <iframe src="https://maps.google.com/maps?q=10.684253,-71.612688&z=16&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Barquisimeto -->
+    <div class="modal fade" id="modalBarquisimeto" tabindex="-1" aria-labelledby="modalBarquisimetoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="modalBarquisimetoLabel">Ubicación: Barquisimeto</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body p-0">
+            <iframe src="https://maps.google.com/maps?q=10.067934,-69.346597&z=16&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Maracay -->
+    <div class="modal fade" id="modalMaracay" tabindex="-1" aria-labelledby="modalMaracayLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="modalMaracayLabel">Ubicación: Maracay</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body p-0">
+            <iframe src="https://maps.google.com/maps?q=10.246944,-67.595833&z=16&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Puerto La Cruz -->
+    <div class="modal fade" id="modalPLC" tabindex="-1" aria-labelledby="modalPLCLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header border-0">
+            <h5 class="modal-title" id="modalPLCLabel">Ubicación: Puerto La Cruz</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body p-0">
+            <iframe src="https://maps.google.com/maps?q=10.206667,-64.632778&z=16&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Aqui comienza la sección de repuestos -->
+    <section class="parts-section py-5">
+        <div class="container">
+            <div class="parts-card p-4 p-md-5 rounded-0 shadow-sm">
+                <div class="text-center mb-4"> <!-- Primera seccion -->
+                    <h2>Repuestos Destacados</h2>
+                    <p>Descubre los repuestos disponibles en nuestra tienda, diseñados para mantener tu auto con el mejor rendimiento.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-sm-6 col-lg-4"> <!-- Segunda seccion -->
+                        <div class="part-item p-4 h-100 d-flex flex-column">
+                            <img src="./assets/images/Repuestos/caja_de_cambio.jpg" alt="Caja de cambio" class="part-image mb-3 rounded-3">
+                            <span class="part-badge">Nuevo</span>
+                            <h3>Caja de cambio</h3>
+                            <p>Mejora la respiración del motor y protege tu sistema de admisión con un filtro de alta calidad.</p>
+                            <a href="#" class="btn btn-outline-light btn-sm mt-auto">Ver detalle</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4"> <!-- Tercera seccion -->
+                        <div class="part-item p-4 h-100 d-flex flex-column">
+                            <img src="./assets/images/Repuestos/motor v8.jpg" alt="Motor V8" class="part-image mb-3 rounded-3">
+                            <span class="part-badge">Oferta</span>
+                            <h3>Motor V8</h3>
+                            <p>Un poderoso motor de alto rendimiento para tu vehículo.</p>
+                            <a href="#" class="btn btn-outline-light btn-sm mt-auto">Ver detalle</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4"> <!-- Cuarta seccion -->
+                        <div class="part-item p-4 h-100 d-flex flex-column">
+                            <img src="./assets/images/Repuestos/aceite_vehiculo.jpg" alt="Aceite sintético" class="part-image mb-3 rounded-3">
+                            <span class="part-badge">Top</span>
+                            <h3>Aceite Sintético 5W-30</h3>
+                            <p>Lubricante premium para motor con máxima protección en todo tipo de climas.</p>
+                            <a href="#" class="btn btn-outline-light btn-sm mt-auto">Ver detalle</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">  <!-- Quinta seccion -->
+                        <div class="part-item p-4 h-100 d-flex flex-column">
+                            <img src="./assets/images/Repuestos/bujia.webp" alt="Bujías" class="part-image mb-3 rounded-3">
+                            <span class="part-badge">Recomendado</span>
+                            <h3>Bujías de Alto Rendimiento</h3>
+                            <p>Encendido confiable y eficiente para que tu motor responda mejor en cada partida.</p>
+                            <a href="#" class="btn btn-outline-light btn-sm mt-auto">Ver detalle</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">  <!-- Sexta seccion -->
+                        <div class="part-item p-4 h-100 d-flex flex-column">
+                            <img src="./assets/images/Repuestos/neumaticos.jpg" alt="Neumáticos deportivos" class="part-image mb-3 rounded-3">
+                            <span class="part-badge">Edición</span>
+                            <h3>Neumáticos Deportivos</h3>
+                            <p>Tracción superior y diseño moderno para una conducción segura y con estilo.</p>
+                            <a href="#" class="btn btn-outline-light btn-sm mt-auto">Ver detalle</a>
+                        </div>
+                    </div>  
+                    <div class="col-sm-6 col-lg-4">  <!-- Séptima seccion -->
+                        <div class="part-item p-4 h-100 d-flex flex-column">
+                            <img src="./assets/images/Repuestos/luces.jpg" alt="Bombillas LED" class="part-image mb-3 rounded-3">
+                            <span class="part-badge">Premium</span>
+                            <h3>Bombillas LED</h3>
+                            <p>Iluminación blanca intensa para una visibilidad superior en carretera nocturna.</p>
+                            <a href="#" class="btn btn-outline-light btn-sm mt-auto">Ver detalle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Aqui termina la sección de repuestos -->
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="contact-card p-4 p-md-5 rounded-0 shadow-sm">
+                <div class="text-center mb-4">  <!-- Mensaje de contactanos -->
+                    <h2>Contáctanos</h2>
+                    <p>¿Tienes preguntas sobre nuestros vehículos o repuestos? Envíanos un mensaje y te responderemos pronto.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <form action="#" method="post" class="contact-form">
+                            <div class="row g-3">
+                                <div class="col-md-6"> <!-- Columna para el nombre -->
+                                    <label for="contactName" class="form-label fw-bold">Nombre</label>
+                                    <input type="text" class="form-control" id="contactName" name="name" required>
+                                </div>
+                                <div class="col-md-6"> <!-- Columna para el correo electrónico -->
+                                    <label for="contactEmail" class="form-label fw-bold">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="contactEmail" name="email" required>
+                                </div>
+                                <div class="col-12"> <!-- Columna para el asunto del correo -->
+                                    <label for="contactSubject" class="form-label fw-bold">Asunto</label>
+                                    <input type="text" class="form-control" id="contactSubject" name="subject" required>
+                                </div>
+                                <div class="col-12"> <!-- Mensaje -->
+                                    <label for="contactMessage" class="form-label fw-bold">Mensaje</label>
+                                    <textarea class="form-control" id="contactMessage" name="message" rows="5" required></textarea>
+                                </div>
+                                <div class="col-12 text-center"> <!-- Botón de envío -->
+                                    <button type="submit" class="btn btn-primary btn-lg">Enviar Mensaje</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Aqui termina la sección de contacto -->
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer Section -->
+    <footer class="footer-section bg-dark text-light mt-3">
+        <div class="container">
+            <div class="row gy-1 align-items-center">
+                <div class="col-12 col-md-4 mb-1 mb-md-0 text-md-start text-center">
+                    <h5 class="fw-bold mb-1">WorldCar</h5>
+                    <p class="mb-0">&copy; 2026 WorldCar. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-12 col-md-4 mb-1 mb-md-0 footer-contacts justify-content-md-center justify-content-center">
+                    <span class="fw-semibold">Caracas:</span> +58 212 555 0101
+                    <span class="fw-semibold">Valencia:</span> +58 241 555 0202
+                    <span class="fw-semibold">Maracaibo:</span> +58 261 555 0303
+                    <span class="fw-semibold">Barquisimeto:</span> +58 251 555 0404
+                    <span class="fw-semibold">Maracay:</span> +58 243 555 0505
+                    <span class="fw-semibold">Puerto La Cruz:</span> +58 286 555 0606
+                </div>
+                <div class="col-12 col-md-4 text-md-end text-center">
+                    <ul class="list-unstyled mb-0 justify-content-md-end justify-content-center">
+                        <li><a href="#" class="footer-link">Inicio</a></li>
+                        <li><a href="#" class="footer-link">Sedes</a></li>
+                        <li><a href="#" class="footer-link">Catálogo</a></li>
+                        <li><a href="#" class="footer-link">Repuestos</a></li>
+                        <li><a href="#" class="footer-link">Contáctanos</a></li>
+                        <li><a href="#" class="footer-link">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

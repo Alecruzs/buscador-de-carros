@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- Acceso de usuarios al área administrativa de WorldCar. -->
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login | Concesionario WorldCar</title>
+	<link rel="icon" type="image/png" href="../assets/images/carro-deportivo.png">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Archivo de estilos globales -->
+	<link href="../assets/styles/styles.css" rel="stylesheet">
+	<!-- Estilos exclusivos de login -->
+	<link href="login.css" rel="stylesheet">
+</head>
+<body>
+	<!-- Navegación mínima para volver al sitio público. -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">       
+		<div class="container"> <!-- creamos un div para el contenedor principal donde se alojarán los elementos de la navegación -->
+			<a class="navbar-brand" href="../home.html">
+				<img src="../assets/images/carro-deportivo-rojo.png" alt="WorldCar Logo"> WorldCar 
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav"> <!-- Agregamos un contenedor para el menú de navegación -->
+				<ul class="navbar-nav ms-auto align-items-lg-center"> <!-- Alineamos los elementos a la derecha y centramos verticalmente en pantallas grandes, creando una etiqueta ul para hacer el menú -->
+					<li class="nav-item">
+						<a class="nav-link" href="../home.html">Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Sedes</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Catálogo</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Repuestos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="#">Login</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+		<!-- El formulario redirige al dashboard después de validar los campos HTML. -->
+		<section class="d-flex align-items-center justify-content-center login-bg">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-7 col-lg-5">
+						<div class="subscribe-card p-4 shadow-sm text-center"> <!-- se crea una card donde iran todos los elementos del inicio de sesión -->
+							<h2 class="mb-3">Concesionario WorldCar</h2>
+							<h2 class="mb-3">Iniciar Sesión</h2>
+							<form action="../dashboeard.html">
+							<div class="mb-3 text-start"> <!-- aqui es donde se introducirá el correo electronico -->
+								<label for="loginEmail" class="form-label fw-bold">Correo electrónico</label>
+								<input type="email" class="form-control" id="loginEmail" placeholder="Ingresa tu correo" required>
+							</div>
+							<div class="mb-3 text-start"> <!-- aqui es donde se introducirá la clave -->
+								<label for="loginPassword" class="form-label fw-bold">Contraseña</label>
+								<input type="password" class="form-control" id="loginPassword" placeholder="Ingresa tu contraseña" required>
+							</div>
+							<div class="mb-3 text-end"> <!-- se crea un hipervinculo para el olvido de contraseña-->
+								<a href="#" class="link-secondary" style="font-size:0.95rem;">¿Olvidaste tu contraseña?</a>
+							</div>
+							<div class="d-grid mb-2"> <!-- se crea un boton el cual se usara para entrar una vez se completen todos los campos de inicio de sesión -->
+								<button type="submit" class="btn btn-primary">Entrar</button>
+							</div>
+						</form>
+						<div class="mt-3"> <!-- se crea un texto y un hipervinculo para registrarse en caso de no tener cuenta -->
+							<span>¿No tienes cuenta?</span> <a href="#" class="link-primary">Regístrate</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Bootstrap JS controla el menú responsive. -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Información corporativa y enlaces secundarios. -->
+	<footer class="footer-section bg-dark text-light mt-3">
+		<div class="container">
+			<div class="row gy-1 align-items-center">
+				<div class="col-12 col-md-4 mb-1 mb-md-0 text-md-start text-center">
+					<h5 class="fw-bold mb-1">WorldCar</h5>
+					<p class="mb-0">&copy; 2026 WorldCar. Todos los derechos reservados.</p>
+				</div>
+				<div class="col-12 col-md-4 mb-1 mb-md-0 footer-contacts justify-content-md-center justify-content-center">
+					<span class="fw-semibold">Caracas:</span> +58 212 555 0101
+					<span class="fw-semibold">Valencia:</span> +58 241 555 0202
+					<span class="fw-semibold">Maracaibo:</span> +58 261 555 0303
+					<span class="fw-semibold">Barquisimeto:</span> +58 251 555 0404
+					<span class="fw-semibold">Maracay:</span> +58 243 555 0505
+					<span class="fw-semibold">Puerto La Cruz:</span> +58 286 555 0606
+				</div>
+				<div class="col-12 col-md-4 text-md-end text-center">
+					<ul class="list-unstyled mb-0 justify-content-md-end justify-content-center">
+						<li><a href="../home.html" class="footer-link">Inicio</a></li>
+						<li><a href="#" class="footer-link">Sedes</a></li>
+						<li><a href="#" class="footer-link">Catálogo</a></li>
+						<li><a href="#" class="footer-link">Repuestos</a></li>
+						<li><a href="#" class="footer-link">Contáctanos</a></li>
+						<li><a href="#" class="footer-link">Login</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

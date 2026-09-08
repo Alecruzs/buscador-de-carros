@@ -1,0 +1,68 @@
+/* Estilos del panel administrativo y sus tarjetas de resumen. */
+
+.dashboard-title {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #f8fafc;
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+}
+
+.dashboard-card {
+    /* El degradado y la sombra separan las métricas del fondo oscuro. */
+    background: linear-gradient(180deg, #2b3037 0%, #1f2429 80%, #0f1318 100%);
+    border: 1px solid rgba(148, 163, 184, 0.20);
+    border-radius: 1.5rem;
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.18);
+    color: #f8fafc;
+    transition: transform 0.2s;
+}
+.dashboard-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 32px 60px rgba(79, 124, 255, 0.10);
+}
+.dashboard-card .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #6d8cff;
+    margin-bottom: 0.5rem;
+}
+.dashboard-card .display-5 {
+    color: #fbbf24;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.dashboard-card .btn-outline-light {
+    border-radius: 1rem;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.dashboard-summary {
+    background: linear-gradient(180deg, #23272e 0%, #181c22 100%);
+    border-radius: 1.2rem;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+    color: #f8fafc;
+    margin-top: 2.5rem;
+    padding: 2rem 1.5rem;
+}
+.dashboard-summary .card-title {
+    color: #6d8cff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+@media (max-width: 767px) {
+    /* En pantallas pequeñas se reduce el espacio para conservar la lectura. */
+    .dashboard-title {
+        font-size: 1.4rem;
+    }
+    .dashboard-summary {
+        padding: 1.2rem 0.5rem;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Fragmento reutilizable del menú lateral administrativo. -->
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sidebar | WorldCar</title>
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Estilos globales -->
+	<link href="../assets/styles/styles.css" rel="stylesheet">
+	<link href="../assets/styles/navbar.css" rel="stylesheet">
+	<link href="../assets/styles/dashboard.css" rel="stylesheet">
+	<!-- Estilos del sidebar -->
+	<link href="../assets/styles/sidebar.css" rel="stylesheet">
+</head>
+<body style="background: linear-gradient(180deg, #2b3037 0%, #1f2429 55%, #0f1318 100%); color: #f8fafc;">
+	<!-- Los enlaces con target=_parent navegan fuera del iframe. -->
+	<aside class="sidebar">
+		<h2 class="dashboard-title"></h2>
+		<ul class="nav nav-pills flex-column mb-auto">
+			<!-- Entrada directa al panel principal. -->
+			<li class="nav-item mb-2">
+				<a href="../dashboeard.html" target="_parent" class="nav-link active" aria-current="page">
+					<span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M3 13h2v-2H3v2zm0-4h2V7H3v2zm4 4h2v-2H7v2zm0-4h2V7H7v2zm4 4h2v-2h-2v2zm0-4h2V7h-2v2z"/><path d="M14 2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h1v2.5a.5.5 0 0 0 .8.4L7 14h7a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM2 3h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H7.5a.5.5 0 0 0-.3.1L3 16v-2.5a.5.5 0 0 0-.5-.5H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/></svg></span>
+					Dashboard
+				</a>
+			</li>
+			<!-- Inventario agrupa las acciones de entradas y salidas. -->
+			<li class="nav-item mb-2">
+				<a href="#submenuInventario" class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="submenuInventario">
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M2 2v12h12V2H2zm11 11H3V3h10v10z"/></svg>
+						Inventario
+					</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M1.5 6l6 6 6-6" stroke="#6d8cff" stroke-width="2" fill="none"/></svg>
+				</a>
+				<div class="collapse ps-4" id="submenuInventario">
+					<ul class="nav flex-column"> <!-- se crea una lista de navegación ul para poder crear los elementos de navegación del submenu -->
+						<li class="nav-item mb-1">
+							<a href="../inventario/inventario.html" target="_parent" class="nav-link">Tablero</a>
+						</li>
+						<li class="nav-item mb-1">
+							<a href="#" class="nav-link">Ingreso</a>
+						</li>
+						<li class="nav-item mb-1">
+							<a href="#" class="nav-link">Egreso</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			</body>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+			<!-- Acceso a la página comercial. -->
+			<li class="nav-item mb-2">
+				<a href="../ventas/" class="nav-link">
+					<span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M6 2a1 1 0 0 0-1 1v1H2.5A1.5 1.5 0 0 0 1 5.5v7A1.5 1.5 0 0 0 2.5 14h11a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 13.5 4H11V3a1 1 0 0 0-1-1H6zm0 1h4v1H6V3zm7.5 2A.5.5 0 0 1 14 5.5v7a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-7A.5.5 0 0 1 2.5 5H13.5z"/></svg></span>
+					Ventas
+				</a>
+			</li>
+			<li class="nav-item mb-2">
+				<a href="#" class="nav-link">
+					<span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M2 2v12h12V2H2zm11 11H3V3h10v10z"/><path d="M8 4a4 4 0 1 1 0 8A4 4 0 0 1 8 4zm0 1a3 3 0 1 0 0 6A3 3 0 0 0 8 5z"/></svg></span>
+					Reportes
+				</a>
+			</li>
+			<li class="nav-item mb-2">
+				<a href="#" class="nav-link"> 
+					<span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 2a2 2 0 0 0-2 2v1H4.5A1.5 1.5 0 0 0 3 6.5v7A1.5 1.5 0 0 0 4.5 15h7A1.5 1.5 0 0 0 13 13.5v-7A1.5 1.5 0 0 0 11.5 5H10V4a2 2 0 0 0-2-2zm0 1a1 1 0 0 1 1 1v1H7V4a1 1 0 0 1 1-1zm-3.5 3A.5.5 0 0 1 5 6.5v7a.5.5 0 0 1-.5.5h-1A.5.5 0 0 1 3 13.5v-7A.5.5 0 0 1 3.5 6H4.5zm7 0A.5.5 0 0 1 13 6.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7A.5.5 0 0 1 11.5 6H12.5z"/></svg></span>
+					Producto
+				</a>
+			</li>
+			<li class="nav-item mb-2">
+				<a href="../users/" class="nav-link">
+					<span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm4-3a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/><path d="M14 14s-1-1.5-6-1.5S2 14 2 14V13a6 6 0 0 1 12 0v1z"/></svg></span>
+					Usuario
+				</a>
+			</li>
+		</ul>
+	</aside>
+</body>
+</html>

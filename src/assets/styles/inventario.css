@@ -1,0 +1,52 @@
+/* Layout y tabla propios de la vista de inventario. */
+
+.inventario-main {
+    flex: 1;
+    padding: 2.5rem 2rem;
+    background: transparent;
+    min-height: 100vh;
+}
+
+.inventario-title {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    color: #6d8cff;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.04em;
+}
+
+.inventario-table-container {
+    /* El overflow permite consultar la tabla completa en móviles. */
+    background: rgba(18, 24, 36, 0.92);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(148, 163, 184, 0.20);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.18);
+    padding: 2rem 1.5rem;
+    overflow-x: auto;
+}
+
+.inventario-table {
+    margin-bottom: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.inventario-table th, .inventario-table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    /* Ajustes de densidad para pantallas medianas y pequeñas. */
+    .inventario-main {
+        padding: 1.2rem 0.5rem;
+    }
+    .inventario-title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    .inventario-table-container {
+        padding: 1rem 0.2rem;
+    }
+}

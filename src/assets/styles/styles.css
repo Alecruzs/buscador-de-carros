@@ -1,3 +1,7 @@
+/*
+ * Estilos compartidos de la página pública: fondo, tipografía, hero,
+ * catálogo, sedes, repuestos, contacto y pie de página.
+ */
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(180deg, #2b3037 0%, #1f2429 55%, #0f1318 100%);
@@ -26,6 +30,7 @@ p {
     height: 50px;
 }
 .hero {
+    /* El carrusel ocupa casi toda la primera pantalla. */
     position: relative;
     height: 80vh;
     overflow: hidden;
@@ -64,6 +69,7 @@ p {
     margin: 0 auto;
 }
 
+/* Banda de suscripción y sus controles de correo. */
 .subscribe-section {
     background: transparent;
     color: #1f2937;
@@ -133,6 +139,7 @@ p {
     box-shadow: 0 0 0 0.16rem rgba(28, 29, 29, 0.26);
 }
 
+/* Filtros del catálogo y tarjetas renderizadas por catalogo.js. */
 .catalog-section {
     background: transparent;
     color: #111827;
@@ -217,6 +224,70 @@ p {
     box-shadow: 0 0 0 0.25rem rgba(79, 124, 255, 0.4);
 }
 
+.vehicle-card {
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 1rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(99, 102, 241, 0.55);
+}
+
+.vehicle-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.vehicle-card-body {
+    padding: 1.15rem;
+}
+
+.vehicle-brand, .vehicle-details {
+    color: rgba(203, 213, 225, 0.72);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.vehicle-card h3 {
+    color: #f8fafc;
+    font-size: 1.25rem;
+    margin: 0.15rem 0 0;
+}
+
+.vehicle-condition {
+    color: #c7d2fe;
+    background: rgba(79, 124, 255, 0.18);
+    border-radius: 999px;
+    padding: 0.3rem 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.vehicle-details {
+    margin: 1rem 0 0.7rem;
+}
+
+.vehicle-price {
+    color: #fbbf24;
+    font-size: 1.15rem;
+}
+
+.vehicle-empty {
+    border: 1px dashed rgba(148, 163, 184, 0.4);
+    border-radius: 1rem;
+    color: rgba(226, 232, 240, 0.8);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* Tarjetas de las sedes y sus estados interactivos. */
 .branches-section {
     background: transparent;
     color: #111827;
@@ -289,6 +360,7 @@ p {
     font-size: 0.95rem;
 }
 
+/* Catálogo de repuestos destacados. */
 .parts-section {
     background: transparent;
     color: #f8fafc;
@@ -383,6 +455,7 @@ p {
     transform: translateY(-2px);
 }
 
+/* Formulario de contacto al final de la página. */
 .contact-section {
     background: transparent;
     color: #f8fafc;
@@ -516,6 +589,7 @@ p {
     box-shadow: 0 0 0 0.25rem rgba(79, 124, 255, 0.4);
 }
 
+/* Pie de página de la vista pública. */
 .footer-section {
     background: linear-gradient(180deg, #181c22 0%, #23272e 100%);
     color: #f8fafc;

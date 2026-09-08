@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- Vista administrativa de existencias, entradas y salidas. -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario | WorldCar</title>
+    <link rel="icon" type="image/png" href="../assets/images/carro-deportivo.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos globales y componentes específicos del inventario. -->
+    <link href="../assets/styles/styles.css" rel="stylesheet">
+    <link href="../assets/styles/navbar.css" rel="stylesheet">
+    <link href="../assets/styles/dashboard.css" rel="stylesheet">
+    <link href="../assets/styles/sidebar.css" rel="stylesheet">
+    <link href="../assets/styles/inventario.css" rel="stylesheet">
+</head>
+<body style="margin:0; padding:0; background: linear-gradient(180deg, #2b3037 0%, #1f2429 55%, #0f1318 100%); color: #f8fafc;">
+    <!-- Barra superior compartida con el dashboard. -->
+    <iframe src="../navbar/navbar.html" style="width:100vw; height:100px; min-height:100px; max-height:100px; border:none; display:block;"></iframe>
+    <div style="display: flex; min-height: calc(100vh - 100px);">
+        <!-- Navegación lateral compartida con el dashboard. -->
+        <iframe src="../sidebar/sidebar.html" style="width:250px; min-width:250px; max-width:250px; border:none; height:100vh; background:transparent;"></iframe>
+        <!-- Resumen financiero y tabla de existencias. -->
+        <main class="inventario-main">
+            <h1 class="inventario-title">Inventario de Vehículos</h1>
+            <!-- Indicadores rápidos del estado del inventario. -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <div class="dashboard-card card h-100 text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Ingresos</h5>
+                            <p class="display-5 fw-bold" style="color:#22d3ee;">$12,500</p>
+                            <span class="text-secondary">Total de ingresos del mes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="dashboard-card card h-100 text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Egresos</h5>
+                            <p class="display-5 fw-bold" style="color:#f87171;">$7,200</p>
+                            <span class="text-secondary">Total de egresos del mes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="dashboard-card card h-100 text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Existencias</h5>
+                            <p class="display-5 fw-bold" style="color:#fbbf24;">25</p>
+                            <span class="text-secondary">Vehículos en stock</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Registro tabular de productos y movimientos. -->
+            <div class="inventario-table-container">
+                <table class="table table-dark table-hover align-middle inventario-table">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Salida</th>
+                            <th>Entrada</th>
+                            <th>Existencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Mazda CX-5</td>
+                            <td>$32,000</td>
+                            <td>2</td>
+                            <td>5</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Toyota Corolla</td>
+                            <td>$25,000</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Chevrolet Onix</td>
+                            <td>$18,500</td>
+                            <td>0</td>
+                            <td>4</td>
+                            <td>12</td>
+                        </tr>
+                        <!-- Más filas de ejemplo -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

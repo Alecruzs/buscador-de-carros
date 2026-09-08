@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- Panel administrativo con métricas y gráficos de actividad. -->
+<html lang="es">
+<head>
+	<!-- Chart.js se usa únicamente para dibujar los dos gráficos del panel. -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dashboard | WorldCar</title>
+	<link rel="icon" type="image/png" href="./assets/images/carro-deportivo.png">
+	<link rel="stylesheet" href="./assets/styles/styles.css">
+	<link rel="stylesheet" href="./assets/styles/navbar.css">
+	<link rel="stylesheet" href="./assets/styles/dashboard.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/styles/footer.css">
+</head>
+<body style="margin:0; padding:0;">
+	<!-- La barra superior se mantiene como una vista reutilizable. -->
+	<iframe src="./navbar/navbar.html" style="width:100vw; height:100px; min-height:100px; max-height:100px; border:none; display:block;"></iframe>
+
+	<!-- Layout del panel: sidebar fijo a la izquierda y contenido principal. -->
+	<div style="display: flex; min-height: calc(100vh - 160px); flex-direction: row;">
+		<!-- Menú lateral cargado desde un documento independiente. -->
+		<iframe src="./sidebar/sidebar.html" style="width:250px; min-width:250px; max-width:250px; border:none; height:100vh; background:transparent;"></iframe>
+		<!-- Indicadores, gráficos y resumen de actividad. -->
+		<main class="container py-3" style="margin-top:0; flex:1;">
+			<h1 class="dashboard-title">Panel de Control</h1>
+			<div class="row g-4">
+				<div class="col-md-4">
+					<div class="dashboard-card card h-100">
+						<div class="card-body text-center">
+							<h5 class="card-title">Vehículos en Inventario</h5>
+							<p class="display-5 fw-bold">128</p>
+							<a href="#" class="btn btn-outline-light btn-sm">Ver inventario</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="dashboard-card card h-100">
+						<div class="card-body text-center">
+							<h5 class="card-title">Ventas del Mes</h5>
+							<p class="display-5 fw-bold">23</p>
+							<a href="#" class="btn btn-outline-light btn-sm">Ver ventas</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+				<div class="dashboard-card card h-100">
+					<div class="card-body text-center">
+						<h5 class="card-title">Usuarios Registrados</h5>
+						<p class="display-5 fw-bold">15</p>
+						<a href="#" class="btn btn-outline-light btn-sm">Ver usuarios</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mt-4">
+			<div class="col-lg-6 mb-4">
+				<div class="dashboard-card card h-100 p-3">
+					<h5 class="card-title text-center">Inventario por Categoría</h5>
+					<canvas id="inventarioChart" height="180"></canvas>
+				</div>
+			</div>
+			<div class="col-lg-6 mb-4">
+				<div class="dashboard-card card h-100 p-3">
+					<h5 class="card-title text-center">Ventas Últimos 6 Meses</h5>
+					<canvas id="ventasChart" height="180"></canvas>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="dashboard-summary">
+					<h5 class="card-title">Resumen de Actividad</h5>
+					<p class="mb-0">Aquí puedes ver un resumen de la actividad reciente del concesionario, ventas, registros y movimientos de inventario.</p>
+				</div>
+			</div>
+		</div>
+		</main>
+	</div>
+
+	<!-- Pie reutilizable, fijado al borde inferior de la pantalla. -->
+	<iframe src="./footer.html" style="width:100%; height:90px; border:none; display:block; position:fixed; left:0; bottom:0; z-index:100;"></iframe>
+	<div style="height:60px;"></div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script>
+// Compara la cantidad de vehículos según su tipo.
+const ctxInv = document.getElementById('inventarioChart').getContext('2d');
+new Chart(ctxInv, {
+	type: 'bar',
+	data: {
+		labels: ['SUV', 'Sedán', 'Pickup', 'Deportivo', 'Híbrido'],
+		datasets: [{
+			label: 'Cantidad',
+			data: [35, 28, 18, 12, 35],
+			backgroundColor: [
+				'#6d8cff', '#fbbf24', '#4f7cff', '#a5b4fc', '#f87171'
+			],
+			borderRadius: 8
+		}]
+	},
+	options: {
+		plugins: { legend: { display: false } },
+		scales: {
+			x: { grid: { color: 'rgba(148,163,184,0.10)' }, ticks: { color: '#f8fafc' } },
+			y: { grid: { color: 'rgba(148,163,184,0.10)' }, ticks: { color: '#f8fafc' }, beginAtZero: true }
+		}
+	}
+});
+
+// Muestra la evolución de las ventas durante los últimos seis meses.
+const ctxVentas = document.getElementById('ventasChart').getContext('2d');
+new Chart(ctxVentas, {
+	type: 'line',
+	data: {
+		labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
+		datasets: [{
+			label: 'Ventas',
+			data: [12, 15, 10, 18, 23, 21],
+			borderColor: '#6d8cff',
+			backgroundColor: 'rgba(109,140,255,0.15)',
+			tension: 0.4,
+			pointBackgroundColor: '#fbbf24',
+			pointBorderColor: '#fbbf24',
+			pointRadius: 5,
+			fill: true
+		}]
+	},
+	options: {
+		plugins: { legend: { display: false } },
+		scales: {
+			x: { grid: { color: 'rgba(148,163,184,0.10)' }, ticks: { color: '#f8fafc' } },
+			y: { grid: { color: 'rgba(148,163,184,0.10)' }, ticks: { color: '#f8fafc' }, beginAtZero: true }
+		}
+	}
+});
+</script>
+</body>
+</html>
